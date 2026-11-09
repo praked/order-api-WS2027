@@ -1,0 +1,19 @@
+[project]
+name = "orders-api"
+version = "0.1.0"
+description = "Teaching repo for the Agentic AI Coding course (University of Konstanz)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# FastAPI's Depends()/Query() defaults are idiomatic, not a bug.
+ignore = ["B008"]
